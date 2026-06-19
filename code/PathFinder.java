@@ -11,7 +11,7 @@ public class PathFinder {
         int[][] maze = mazeGrid.getMaze();
         int startRow = -1, startCol = -1;
 
-        // Step 1: Locate the starting position (Green cell)
+        //  Locate the starting position (Green cell)
         for (int r = 0; r < mazeGrid.getRows(); r++) {
             for (int c = 0; c < mazeGrid.getCols(); c++) {
                 if (maze[r][c] == 2) {
@@ -21,7 +21,7 @@ public class PathFinder {
             }
         }
 
-        // Step 2: Set up BFS Queue and Visited array
+        //  Set up BFS Queue and Visited array
         Queue<Node> queue = new LinkedList<>();
         boolean[][] visited = new boolean[mazeGrid.getRows()][mazeGrid.getCols()];
 
@@ -31,7 +31,7 @@ public class PathFinder {
         // Up, Down, Right, Left
         int[][] directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-        // Step 3: Execute BFS
+        //  Execute BFS
         while (!queue.isEmpty()) {
             Node current = queue.poll();
 

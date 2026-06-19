@@ -73,7 +73,6 @@ class GameFrame extends JFrame {
         add(topPanel, BorderLayout.NORTH);
         add(mazePanel, BorderLayout.CENTER);
 
-        // Put your name right in the title bar
         setTitle("Semester 2 Final Project - By Abdullah Malik"); 
         setSize(600, 650);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -88,17 +87,14 @@ class MazePanel extends JPanel {
 
     public MazePanel(MazeGrid mazeGrid) {
         this.mazeGrid = mazeGrid;
-        
-        // THE EASTER EGG: Sounds like a real student left this in
+
         this.addMouseListener(new MouseAdapter() {
-            @Override
             public void mouseClicked(MouseEvent e) {
                 System.out.println("Yikes, no mouse controls here, heehhehehehehe *wink*");
             }
         });
     }
 
-    @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         int[][] maze = mazeGrid.getMaze();

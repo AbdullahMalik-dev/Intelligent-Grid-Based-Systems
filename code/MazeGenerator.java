@@ -16,10 +16,9 @@ public class MazeGenerator {
                 maze[row][col] = 0;
             }
         }
-        // Step 2: Carve paths recursively starting at cell (1,1)
         generate(1, 1);
 
-        // Step 3: Set constant entry and escape points
+        // Set constant entry and escape points
         maze[1][1] = 2; 
         maze[mazeGrid.getRows() - 2][mazeGrid.getCols() - 2] = 3; 
     }
